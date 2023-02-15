@@ -19,12 +19,14 @@ for(var i = 0; i < patients.length; i++) {
         console.log("Peso inválido.");
         weightValid = false;
         imc.textContent = "Peso inválido!"
+        patient.classList.add("patient-invalid");
     }
 
     if(height <= 0 || height >= 3.00) {
-        console.log("Altura inválido.");
+        console.log("Altura inválida.");
         heightValid = false;
-        imc.textContent = "Altura inválido!"
+        imc.textContent = "Altura inválida!"
+        patient.classList.add("patient-invalid");
     }
 
     if(heightValid && weightValid) {

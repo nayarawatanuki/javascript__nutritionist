@@ -132,3 +132,7 @@ button[disabled=disabled], button:disabled {
 .add-patient {
     margin-top: 30px;
 }
+
+.patient-invalid {
+	background-color: #e43535;
+}
