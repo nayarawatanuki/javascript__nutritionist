@@ -54,7 +54,7 @@ A construção/estrutura da página foi pensada e focada mais na parte de `javas
   - Filtro: 
     - Filtrar pacientes utilizando um campo de busca e `addEventListener("input", function() {}`;
     - resultados conforme a digitação do usuário;
-    - uso de `regex`; \
+    - uso de `regex`;
   
   - API:
     - busca de mais pacientes utilizando uma API;
