@@ -1,0 +1,60 @@
+/* The Modal (background) */
+.patient-modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+/* Modal Content/Box */
+.modal-container {
+	background-color: #fefefe;
+	margin: 10% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 70%; /* Could be more or less, depending on screen size */
+}
+
+.form__title {
+	font-size: 32px;
+}
+
+.form-container {
+	display: flex;
+	margin: 0;
+	justify-content: space-evenly;
+}
+
+.form__label {
+	color: #555;
+	display: block;
+	margin-bottom: .2em;
+}
+
+.form__group {
+	display: inline-block;
+	padding: 10px 5px;
+	width: 100%;
+}
+
+.form__field {
+	border: 1px solid #ccc;
+	margin: 0;
+	padding: .7em;
+	padding-bottom: 1em;
+	width: 100%;
+}
+
+.form__field--invalid {
+	border: 2px solid red;
+}
+
+.form__msg--error {
+	color: red;
+}

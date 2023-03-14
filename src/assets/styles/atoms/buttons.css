@@ -1,0 +1,68 @@
+.button-container {
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	margin-top: 5%;
+}
+
+.button {
+	clear: both;
+	cursor: pointer;
+	display: block;
+	font-size: 1rem;
+	margin: 10px 0px;
+	padding: .5em;
+	text-align: center;
+	width: auto;
+}
+
+.button[disabled=disabled], .button:disabled {
+	background-color: gray;
+	border-color: darkgray;
+	
+}
+
+.button-default {
+	background-color:#0c8cd3;
+	border: 3px outset #0c8cd3;
+	color: #FFFFFF;
+}
+
+.button-default:active {
+	border: 3px inset #0c8cd3;
+}
+
+.button-cancel, 
+#searchPatients {
+	margin-right: 10px;
+
+}
+
+.button-cancel {
+	background-color: #AAA;
+	border: 3px outset #AAA;
+	color: #FFFFFF;
+}
+
+.button-default:hover,
+.button-default:focus,
+.button-cancel:hover,
+.button-cancel:focus {
+	color: black;
+}
+
+/* The Close Button */
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}

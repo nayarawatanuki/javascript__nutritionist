@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="src/assets/icon/favicon.ico" type="image/x-icon">
 
-        <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="src/assets/styles/reset.css">
+        <link rel="stylesheet" href="src/assets/styles/style.css">
 
         <title>Nutrição</title>
     </head>
@@ -25,13 +25,19 @@
 
                 <h2>Meus pacientes</h2>
 
+                <fieldset>
+                    <label for="filter" class="form__label">Buscar paciente:</label>
+                    <input id="filter" name="filter" type="search" placeholder="Digite o nome do seu paciente" class="form__field">
+                    <span class="form__msg--error" id="name--error"></span>
+                </fieldset>
+
                 <table>
                     <thead>
                         <tr>
                             <th>Nome</th>
-                            <th>Peso(kg)</th>
-                            <th>Altura(m)</th>
-                            <th>Gordura Corporal(%)</th>
+                            <th>Peso (kg)</th>
+                            <th>Altura (m)</th>
+                            <th>Gordura Corporal (%)</th>
                             <th>IMC</th>
                         </tr>
                     </thead>
@@ -40,7 +46,7 @@
                         <tr class="patient" id="first-patient">
                             <td class="patient__name">Paulo</td>
                             <td class="patient__weight">100</td>
-                            <td class="patient__height">3.00</td>
+                            <td class="patient__height">2.00</td>
                             <td class="patient__fat">10</td>
                             <td class="patient__imc">0</td>
                         </tr>
@@ -78,8 +84,56 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <span class="form__msg--error" id="search--error"></span>
+                <div class="button-container">
+                    <button id="searchPatients" class="button button-default">Buscar</button>
+
+                    <button id="button-modal" class="button button-default">Adicionar</button>
+                </div>
+
             </section>
+
+            <dialog open id="addPatientModal" class="patient-modal">
+                <section class="modal-container" method="dialog">
+                    <span class="close">&times;</span>
+                    <form id="form-addPatient" role="document">
+                        <h2 class="form__title">Adicionar novo paciente</h2>
+                        
+                        <fieldset class="form__group block">
+                            <label for="name" class="form__label">Nome:</label>
+                            <input id="name" name="name" type="text" placeholder="digite o nome do seu paciente" class="form__field">
+                            <span class="form__msg--error" id="name--error"></span>
+                        </fieldset>
+                        
+                        <section class="form-container">
+                            <fieldset class="form__group">
+                                <label for="weight" class="form__label">Peso (kg):</label>
+                                <input id="weight" name="weight" type="number" step=".01" value="0" class="form__field">
+                                <span class="form__msg--error" id="weight--error"></span>
+                            </fieldset>
+
+                            <fieldset class="form__group">
+                                <label for="height" class="form__label">Altura (m):</label>
+                                <input id="height" name="height" type="number" step=".01" value="0" class="form__field">
+                                <span class="form__msg--error" id="height--error"></span>
+                            </fieldset>
+                            
+                            <fieldset class="form__group">
+                                <label for="fat" class="form__label">% de Gordura:</label>
+                                <input id="fat" name="fat" type="number" step=".01" min="0" value="0" class="form__field">
+                                <span class="form__msg--error" id="fat--error"></span>
+                            </fieldset>
+
+                        </section>
+                        <section class="button-container">
+                            <button class="button button-cancel">Cancelar</button>
+                            <button type="submit" id="addPatient" class="button button-default">Adicionar</button>
+                        </section>
+                    </form>
+                </section>
+            </dialog>
         </main>
-        <script src="js/index.js"></script>
+        <script type="module" src="src/assets/js/index.js"></script>
     </body>
 </html>
